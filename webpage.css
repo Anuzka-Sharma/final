@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #28a745;
+    color: white;
+    padding: 20px;
+}
+
+.hero {
+    background: #fff;
+    padding: 50px 20px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.features {
+    display: flex;
+    justify-content: center;  /* Center align karega */
+    gap: 30px;  /* Boxes ke beech gap badhane ke liye */
+    flex-wrap: wrap; /* Small screens ke liye wrapping allow karega */
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 15%;  /* Sabhi boxes ek hi size ke rahenge */
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .feature {
+        width: 45%; /* Medium screens ke liye do column */
+    }
+}
+
+@media (max-width: 600px) {
+    .feature {
+        width: 100%; /* Chhoti screens ke liye ek column */
+    }
+}
+
+
+
+footer {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

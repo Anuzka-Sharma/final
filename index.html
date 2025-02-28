@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup Test</title>
+</head>
+<body>
+    <button id="signupBtn">Signup</button>
+
+    <script>
+        document.getElementById("signupBtn").addEventListener("click", () => {
+            fetch("http://localhost:8080/auth/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    username: "testuser",
+                    password: "testpass",
+                    mobile: "9876543210"
+                })
+            })
+            .then(response => response.json())
+            .then(data => console.log("✅ Success:", data))
+            .catch(error => console.error("❌ Error:", error));
+        });
+    </script>
+</body>
+</html>
